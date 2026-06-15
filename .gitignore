@@ -1,0 +1,8 @@
+Build/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.dll
+imgui.ini
+Log.txt

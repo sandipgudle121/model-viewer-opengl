@@ -1,0 +1,583 @@
+Info,  T4556: Load dae.dae
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Found a matching importer for this file format: Collada Importer.
+Info,  T4556: Import root directory is '.\'
+Debug, T4556: Collada schema version is 1.4.n
+Debug, T4556: UpdateImporterScale scale set: 1
+Debug, T4556: ValidateDataStructureProcess begin
+Debug, T4556: ValidateDataStructureProcess end
+Debug, T4556: START `t1`
+Debug, T4556: END   `t1`, dt= 857 s
+Debug, T4556: Stream is nullptr.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/spider.obj
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/spider.obj".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_linear.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_linear.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_bezier.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_bezier.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_stepped.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_stepped.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_oldformat_56.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_oldformat_56.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_offset_repeat.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_offset_repeat.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_hermite.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_hermite.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_y_pre_ofrep_post_osc.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_y_pre_ofrep_post_osc.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_oldformat_6.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_oldformat_6.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_repeat.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_repeat.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_linear.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_linear.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_constant.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_constant.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_reset.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_x_post_reset.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_spline.lws
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWS/move_xz_spline.lws".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/boxuv.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/boxuv.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/formatDetection
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/formatDetection".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/invalid/empty.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/invalid/empty.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/box_2uv_1unused.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/box_2uv_1unused.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/box_2vc_1unused.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/box_2vc_1unused.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/concave_polygon.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/concave_polygon.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/concave_self_intersecting.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/concave_self_intersecting.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/hierarchy.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/hierarchy.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/hierarchy_smoothed.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/hierarchy_smoothed.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_x.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_x.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_x_scale_222_wrap_21.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_x_scale_222_wrap_21.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y_scale_111.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y_scale_111.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y_scale_111_wrap_21.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_y_scale_111_wrap_21.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_z.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_cylindrical_z.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_x.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_x.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_y.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_y.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_z.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_z.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_z_scale_111.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_planar_z_scale_111.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_x.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_x.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_x_scale_222_wrap_22.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_x_scale_222_wrap_22.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_y.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_y.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_z.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_z.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_z_wrap_22.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_spherical_z_wrap_22.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_uv_cylindrical_y.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/MappingModes/earth_uv_cylindrical_y.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/ModoExport_vertNormals.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/ModoExport_vertNormals.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/nonplanar_polygon.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/nonplanar_polygon.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/CellShader.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/CellShader.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/fastFresnel.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/fastFresnel.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/realFresnel.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/realFresnel.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/SuperCellShader.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/shader_test/SuperCellShader.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/sphere_with_gradient.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/sphere_with_gradient.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/sphere_with_mat_gloss_10pc.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/sphere_with_mat_gloss_10pc.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/Subdivision.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/Subdivision.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/transparency.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/transparency.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/UglyVertexColors.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/UglyVertexColors.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/uvtest.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWO2/uvtest.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/ConcavePolygon.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/ConcavePolygon.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/MappingModes/bluewithcylindrictexz.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/MappingModes/bluewithcylindrictexz.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/sphere_with_mat_gloss_10pc.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/sphere_with_mat_gloss_10pc.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/sphere_with_mat_gloss_50pc.lwo
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/LWO/LWOB/sphere_with_mat_gloss_50pc.lwo".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/SMD/triangle.smd
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/SMD/triangle.smd".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/SMD/holy_grailref.smd
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/SMD/holy_grailref.smd".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/TwoBoxes/TwoBoxes.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/TwoBoxes/TwoBoxes.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/IncorrectVertexArrays/Cube_v1.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/IncorrectVertexArrays/Cube_v1.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/TwoBoxes/TwoBoxes.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF/TwoBoxes/TwoBoxes.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/2CylinderEngine-glTF-Binary/2CylinderEngine.glb
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/2CylinderEngine-glTF-Binary/2CylinderEngine.glb".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-pbrSpecularGlossiness/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-pbrSpecularGlossiness/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/ClearCoat-glTF/ClearCoatTest.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/ClearCoat-glTF/ClearCoatTest.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/ClearCoat-glTF/ClearCoatTest.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/ClearCoat-glTF/ClearCoatTest.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-pbrSpecularGlossiness/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-pbrSpecularGlossiness/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-Embedded/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF-Embedded/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_00.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_00.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_01.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_01.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_02.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_02.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_03.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_03.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_04.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_04.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_05.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_05.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_06.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_06.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_07.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_07.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_08.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_08.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_09.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_09.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_10.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_10.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_11.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_11.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_12.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Asset-Generator/Mesh_PrimitiveMode/Mesh_PrimitiveMode_12.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/simple_skin/simple_skin.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/simple_skin/simple_skin.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/simple_skin/quad_skin.glb
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/simple_skin/quad_skin.glb".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/cameras/Cameras.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/cameras/Cameras.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/IncorrectVertexArrays/Cube.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/IncorrectVertexArrays/Cube.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/textureTransform/TextureTransformTest.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/textureTransform/TextureTransformTest.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Sample-Models/AnimatedMorphCube-glTF/AnimatedMorphCube.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/glTF-Sample-Models/AnimatedMorphCube-glTF/AnimatedMorphCube.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/MissingBin/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/MissingBin/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxWithInfinites-glTF-Binary/BoxWithInfinites.glb
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxWithInfinites-glTF-Binary/BoxWithInfinites.glb".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxBadNormals-glTF-Binary/BoxBadNormals.glb
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxBadNormals-glTF-Binary/BoxBadNormals.glb".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTexcoords-glTF/boxTexcoords.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTexcoords-glTF/boxTexcoords.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTexcoords-glTF/boxTexcoords.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTexcoords-glTF/boxTexcoords.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/RecursiveNodes/RecursiveNodes.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/RecursiveNodes/RecursiveNodes.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/TestNoRootNode/NoScene.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/TestNoRootNode/NoScene.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/TestNoRootNode/SceneWithoutNodes.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/TestNoRootNode/SceneWithoutNodes.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/issue_3269/texcoord_crash.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/issue_3269/texcoord_crash.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/IndexOutOfRange/IndexOutOfRange.gltf
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Error, T4556: Unable to open file "C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/IndexOutOfRange/IndexOutOfRange.gltf".
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/IndexOutOfRange/AllIndicesOutOfRange.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/draco/2CylinderEngine.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/wrongTypes/badArray.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/wrongTypes/badObject.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/SchemaFailures/sceneWrongType.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/glTF2/BoxTextured-glTF/BoxTextured.gltf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/HMP/terrain.hmp
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/IFC/AC14-FZK-Haus.ifc
+Info,  T4556: Load $$$___magic___$$$.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/spider.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/box.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/cubes_nonames.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/cubes_with_names.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/cubes_with_mirroring_and_pivot.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/close_to_identity_transforms.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/phong_cube.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/global_settings.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/embedded_ascii/box.FBX
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/embedded_ascii/box_embedded_texture_fragmented.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/box_orphant_embedded_texture.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/global_settings.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/embedded_ascii/box.FBX
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/cubes_with_outofrange_float.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/maxPbrMaterial_metalRough.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/maxPbrMaterial_specGloss.fbx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/animation_with_skeleton.fbx
+Info,  T4556: Load $$$___magic___$$$.3ds
+Info,  T4556: Registering custom importer for these file extensions: applelinuxmacwindows
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/test.x
+Info,  T4556: Registering custom importer for these file extensions: fail
+Info,  T4556: Load stdException.fail
+Info,  T4556: Registering custom importer for these file extensions: fail
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3D/box_a.3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3D/box_d.3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3D/box.uc
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3D/mar_rifle.uc
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3D/mar_rifle_a.3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3D/mar_rifle_d.3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/fels.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/testFormatDetection
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/CameraRollAnim.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/CameraRollAnimWithChildObject.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/cubes_with_alpha.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/cube_with_diffuse_texture.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/cube_with_specular_texture.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/RotatingCube.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/TargetCameraAnim.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3DS/test1.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/cart_wheel.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/Granate.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/jeep1.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/mar_rifle.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/mp5_sil.3ds
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/3DS/pyramob.3DS
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/closedLine.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/nosurfaces.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/openLine.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/sample_subdiv.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/SphereWithLight.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/SphereWithLight.acc
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/SphereWithLight_UTF16LE.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/SphereWithLight_UTF8BOM.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/SphereWithLightUvScaling4X.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/Wuson.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/Wuson.acc
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/TestFormatDetection
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AC/doubleSidedFace.ac
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test1.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test2.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test3.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test4.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test5.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test5a.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test6.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test7.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/AMF/test_with_mat.amf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/ThreeCubesGreen.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/anim.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/anim2.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/CameraRollAnim.ase
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/MotionCaptureROM.ase
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/RotatingCube.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TargetCameraAnim.ase
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TestFormatDetection
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/ThreeCubesGreen.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TestUVTransform/UVTransform_Normal.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TestUVTransform/UVTransform_ScaleUV1-2_OffsetUV0-0.9_Rotate-72_mirrorU.ase
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TestUVTransform/UVTransform_ScaleUV2x.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/ASE/TestUVTransform/UVTransform_ScaleUV2x_Rotate45.ASE
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/3MF/box.3mf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/Q3D/earth.q3o
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/STL/Spider_ascii.stl
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/STL/formatDetection
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/STL/triangle_with_two_solids.stl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/STL/triangle_with_empty_solid.stl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/STL/Spider_ascii.stl
+Debug, T4556: TriangulateProcess begin
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/test.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/OV_GetNextToken
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/anim_test.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/BCN_Epileptic.X
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/fromtruespace_bin32.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/kwxport_test_cubewithvcolors.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/test_cube_binary.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/test_cube_compressed.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/test_cube_text.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/Testwuson.X
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X/TestFormatDetection
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/X/dwarf.x
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X3D/HelloX3dTrademark.x3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X3D/IndexedLineSet.x3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/X3D/ComputerKeyboard.x3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/X3D/Chevy/ChevyTahoe.x3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/DXF/PinkEggFromLW.dxf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/DXF/lineTest
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/DXF/issue_2229.dxf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/DXF/wuson.dxf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/DXF/rifle.dxf
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/../models-nonbsd/MMD/Alicia_blade.pmx
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube.ply
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube_uv.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube_binary.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube_binary_header_with_RN_newline.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/cube_binary_starts_with_nl.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/float-color.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/issue623.ply
+Info,  T4556: Load $$$___magic___$$$.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/invalid/crash-30d6d0f7c529b3b66b4131700b7a4580cd7082df.ply
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/PLY/payload_JVN42386607
+Info,  T4556: Load $$$___magic___$$$.
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/spider.obj
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load $$$___magic___$$$.
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/cube_with_vertexcolors.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/cube_with_vertexcolors_uni.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/only_a_part_of_vertexcolors.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/box.obj
+Info,  T4556: Load $$$___magic___$$$.
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load $$$___magic___$$$.
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load $$$___magic___$$$.
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load $$$___magic___$$$.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/cube_mtllib_after_g.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/point_cloud.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/box_without_lineending.obj
+Info,  T4556: Load $$$___magic___$$$.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/mtl_different_folder.obj
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OpenGEX/Example.ogex
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OpenGEX/light_issue1262.ogex
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OpenGEX/empty_camera.ogex
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/SIB/heffalump.sib
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/AreaLight_269.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/box.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/subdivision_test_277.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/4Cubes4Mats_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/blender_269_regress1.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_250.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_250_Compressed.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_262.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_269.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_271.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderDefault_276.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/CubeHierarchy_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/HUMAN.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/MirroredCube_252.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/NoisyTexturedCube_VoronoiGlob_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/SmoothVsSolidCube_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/Suzanne_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/SuzanneSubdiv_252.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/TexturedCube_ImageGlob_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/TexturedPlane_ImageUv_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/TexturedPlane_ImageUvPacked_248.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/TorusLightsCams_250_compressed.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/yxa_1.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/BLEND/Bob.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/BLEND/fleurOptonl.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/BlenderMaterial_269.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/plane_2_textures_2_texcoords_279.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BLEND/test_279.blend
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BVH/01_01.bvh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BVH/01_03.bvh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/BVH/Boxing_Toes.bvh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/CSM/ThomasFechten.csm
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/B3D/WusonBlitz.b3d
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDC/spider.mdc
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/spider.obj
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/dwarf_ascii.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/dwarf.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/molecule_ascii.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/molecule.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/spider_4_3_ascii.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/spider_4_3.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/spider_6_6_ascii.cob
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/COB/spider_6_6.cob
+Info,  T4556: Load $$$___magic___$$$.
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/Ogre/TheThing/Mesh.mesh.xml
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/PK3/SGDTT3.pk3
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OFF/Cube.off
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/NFF/ManyEarthsNotJustOne.nff
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/BCN_Epileptic.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/cubes_with_alpha.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/sample_official.xgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/sample_official_asxml.xml
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/sphere_with_mat_gloss_10pc.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/Spider_ascii.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/Wuson.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/XGL/wuson_dxf.zgl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MD2/faerie.md2
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MD2/sydney.md2
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/MD2/dolphin.md2
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/MD2/flag.md2
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/MD2/horse.md2
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MD5/invalid/empty.md5mesh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MD5/SimpleCube.md5mesh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/MD5/BoarMan.md5mesh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models-nonbsd/MD5/Bob.md5mesh
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/man.mdl
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/chrome_sphere.mdl
+Debug, T4556: Assimp 6.0.0 amd64 msvc shared singlethreadedsingle : 
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/blend_additive.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/alpha_test.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/multiple_roots.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/unnamed_bones.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/unnamed_bodyparts.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/duplicate_bodyparts.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/duplicate_submodels.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/unnamed_sequences.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/duplicate_sequences.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/unnamed_sequence_groups/unnamed_sequence_groups.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/duplicate_sequence_groups/duplicate_sequence_groups.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/MDL/MDL (HL1)/man.mdl
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/RAW/Wuson.raw
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/TER/RealisticTerrain.ter
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/OBJ/spider.obj
+Debug, T4556: RemoveRedundantMatsProcess begin
+Debug, T4556: Found positive match in exclusion list: 'Unique Mat2'
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/FBX/huesitos.fbx
+Debug, T4556: Mesh 0 (unnamed) | Verts in: 900 out: 300 | ~66.6667%
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: RemoveVCProcess finished. Data structure cleanup has been done.
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: RemoveVCProcess finished. Data structure cleanup has been done.
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: RemoveVCProcess finished. Data structure cleanup has been done.
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: RemoveVCProcess finished. Data structure cleanup has been done.
+Debug, T4556: RemoveVCProcess begin
+Info,  T4556: Mesh exceeds the triangle limit. It will be split ...
+Warn,  T4556: Found 300 degenerated primitives
+Warn,  T4556: Found 400 degenerated primitives
+Debug, T4556: FindDegeneratesProcess begin
+Warn,  T4556: Found 400 degenerated primitives
+Error, T4556: FindInvalidDataProcess fails on mesh uvcoords: INF/NAN was found in a vector component
+Info,  T4556: Removed 5500 weights. Input bones: 30. Output bones: 8
+Debug, T4556: PretransformVerticesProcess begin
+Info,  T4556: PretransformVertices: Copying mesh due to mismatching transforms
+Debug, T4556: ScenePreprocessor: Dummy rotation track has been generated
+Debug, T4556: ScenePreprocessor: Adding default material 'DefaultMaterial'
+Info,  T4556: Load C:/Users/sandi/Downloads/assimp-master/assimp-master/test/models/fuzzer_data/clusterfuzz-testcase-minimized-assimp_fuzzer-4751812606885888

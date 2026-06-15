@@ -1,0 +1,10 @@
+^C:\USERS\SANDI\DOWNLOADS\ASSIMP-MASTER\ASSIMP-MASTER\BUILD\CMAKEFILES\7F3403570C1698D9FBAB6A0AEF9FD51F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sandi/Downloads/assimp-master/assimp-master -BC:/Users/sandi/Downloads/assimp-master/assimp-master/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sandi/Downloads/assimp-master/assimp-master/build/Assimp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

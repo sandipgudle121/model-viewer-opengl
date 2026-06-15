@@ -1,0 +1,10 @@
+^C:\USERS\SANDI\DOWNLOADS\ASSIMP-MASTER\ASSIMP-MASTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sandi/Downloads/assimp-master/assimp-master -BC:/Users/sandi/Downloads/assimp-master/assimp-master/build --check-stamp-file C:/Users/sandi/Downloads/assimp-master/assimp-master/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
