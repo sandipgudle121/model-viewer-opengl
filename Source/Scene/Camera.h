@@ -21,5 +21,6 @@ public:
         Yaw(0.0f),
         Pitch(0.0f) {}
 
+    vmath::vec3 GetPosition() const;
     vmath::mat4 GetViewMatrix() const;
 };

@@ -13,6 +13,8 @@ struct ModelInfo
     bool HasNormals = false;
     bool HasTexCoords = false;
     bool HasVertexColors = false;
+    bool HasAlbedoTexture = false;
+    bool HasNodeTransforms = false;
 
     std::uint64_t MeshCount = 0;
     std::uint64_t VertexCount = 0;
@@ -25,6 +27,9 @@ struct ModelInfo
 
     vmath::vec3 BoundsMin = vmath::vec3(0.0f, 0.0f, 0.0f);
     vmath::vec3 BoundsMax = vmath::vec3(0.0f, 0.0f, 0.0f);
+    vmath::vec3 BoundsCenter = vmath::vec3(0.0f, 0.0f, 0.0f);
+    float BoundsRadius = 0.0f;
+    float NormalizedScale = 1.0f;
 };
 
 class Model

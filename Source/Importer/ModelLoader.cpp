@@ -1,8 +1,11 @@
 #include "ModelLoader.h"
 #include "../Core/Logger.h"
+#include "../Renderer/Texture.h"
 #include "../Scene/Model.h"
 #include <chrono>
 #include <cstdint>
+#include <filesystem>
+#include <cmath>
 
 namespace
 {
@@ -22,6 +25,32 @@ namespace
         return textureCount;
     }
 
+    aiVector3D TransformPosition(const aiMatrix4x4& transform, const aiVector3D& position)
+    {
+        return aiVector3D(
+            transform.a1 * position.x + transform.a2 * position.y + transform.a3 * position.z + transform.a4,
+            transform.b1 * position.x + transform.b2 * position.y + transform.b3 * position.z + transform.b4,
+            transform.c1 * position.x + transform.c2 * position.y + transform.c3 * position.z + transform.c4);
+    }
+
+    aiVector3D TransformNormal(const aiMatrix4x4& transform, const aiVector3D& normal)
+    {
+        aiVector3D result(
+            transform.a1 * normal.x + transform.a2 * normal.y + transform.a3 * normal.z,
+            transform.b1 * normal.x + transform.b2 * normal.y + transform.b3 * normal.z,
+            transform.c1 * normal.x + transform.c2 * normal.y + transform.c3 * normal.z);
+
+        float length = std::sqrt(result.x * result.x + result.y * result.y + result.z * result.z);
+        if (length > 0.0f)
+        {
+            result.x /= length;
+            result.y /= length;
+            result.z /= length;
+        }
+
+        return result;
+    }
+
     void ExpandBounds(ModelInfo& info, const aiVector3D& position)
     {
         if (!info.HasBounds)
@@ -39,6 +68,160 @@ namespace
         if (position.x > info.BoundsMax[0]) info.BoundsMax[0] = position.x;
         if (position.y > info.BoundsMax[1]) info.BoundsMax[1] = position.y;
         if (position.z > info.BoundsMax[2]) info.BoundsMax[2] = position.z;
+    }
+
+    void LogUVDiagnostics(const aiMesh* mesh, bool hasTexCoords)
+    {
+        if (!gpfile)
+        {
+            return;
+        }
+
+        const char* meshName = mesh->mName.C_Str();
+        if (!meshName || meshName[0] == '\0')
+        {
+            meshName = "(unnamed)";
+        }
+
+        fprintf(gpfile, "ModelLoader: Mesh '%s' UV0: %s\n", meshName, hasTexCoords ? "YES" : "NO");
+        if (!hasTexCoords || mesh->mNumVertices == 0)
+        {
+            return;
+        }
+
+        float minU = mesh->mTextureCoords[0][0].x;
+        float minV = mesh->mTextureCoords[0][0].y;
+        float maxU = minU;
+        float maxV = minV;
+
+        for (unsigned int i = 1; i < mesh->mNumVertices; i++)
+        {
+            float u = mesh->mTextureCoords[0][i].x;
+            float v = mesh->mTextureCoords[0][i].y;
+
+            if (u < minU) minU = u;
+            if (v < minV) minV = v;
+            if (u > maxU) maxU = u;
+            if (v > maxV) maxV = v;
+        }
+
+        fprintf(gpfile, "ModelLoader: Mesh '%s' UV0 Bounds Min(%.6f, %.6f) Max(%.6f, %.6f)\n", meshName, minU, minV, maxU, maxV);
+
+        unsigned int sampleCount = mesh->mNumVertices < 5 ? mesh->mNumVertices : 5;
+        for (unsigned int i = 0; i < sampleCount; i++)
+        {
+            fprintf(
+                gpfile,
+                "ModelLoader: Mesh '%s' UV0[%u] = (%.6f, %.6f)\n",
+                meshName,
+                i,
+                mesh->mTextureCoords[0][i].x,
+                mesh->mTextureCoords[0][i].y);
+        }
+    }
+
+    void FinalizeBounds(ModelInfo& info)
+    {
+        if (!info.HasBounds)
+        {
+            return;
+        }
+
+        info.BoundsCenter = vmath::vec3(
+            (info.BoundsMin[0] + info.BoundsMax[0]) * 0.5f,
+            (info.BoundsMin[1] + info.BoundsMax[1]) * 0.5f,
+            (info.BoundsMin[2] + info.BoundsMax[2]) * 0.5f);
+
+        vmath::vec3 extent = vmath::vec3(
+            info.BoundsMax[0] - info.BoundsMin[0],
+            info.BoundsMax[1] - info.BoundsMin[1],
+            info.BoundsMax[2] - info.BoundsMin[2]);
+
+        info.BoundsRadius = 0.5f * sqrtf(extent[0] * extent[0] + extent[1] * extent[1] + extent[2] * extent[2]);
+        if (info.BoundsRadius <= 0.0f)
+        {
+            info.BoundsRadius = 1.0f;
+        }
+
+        float maxExtent = extent[0];
+        if (extent[1] > maxExtent) maxExtent = extent[1];
+        if (extent[2] > maxExtent) maxExtent = extent[2];
+        if (maxExtent <= 0.0f)
+        {
+            maxExtent = 1.0f;
+        }
+        info.NormalizedScale = 2.0f / maxExtent;
+    }
+
+    std::string ResolveTexturePath(const std::string& modelDirectory, const aiString& texturePath)
+    {
+        namespace fs = std::filesystem;
+
+        fs::path rawPath(texturePath.C_Str());
+        if (rawPath.empty())
+        {
+            return "";
+        }
+
+        if (rawPath.is_absolute() && fs::exists(rawPath))
+        {
+            return rawPath.string();
+        }
+
+        fs::path directory(modelDirectory);
+        fs::path directPath = directory / rawPath;
+        if (fs::exists(directPath))
+        {
+            return directPath.string();
+        }
+
+        fs::path filename = rawPath.filename();
+        fs::path siblingTexturePath = directory / "textures" / filename;
+        if (fs::exists(siblingTexturePath))
+        {
+            return siblingTexturePath.string();
+        }
+
+        fs::path parentTexturePath = directory.parent_path() / "textures" / filename;
+        if (fs::exists(parentTexturePath))
+        {
+            return parentTexturePath.string();
+        }
+
+        return directPath.string();
+    }
+
+    GLuint LoadDiffuseTextureForMesh(aiMesh* mesh, const aiScene* scene, const std::string& modelDirectory)
+    {
+        if (mesh->mMaterialIndex >= scene->mNumMaterials)
+        {
+            return 0;
+        }
+
+        aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
+        if (!material || material->GetTextureCount(aiTextureType_DIFFUSE) == 0)
+        {
+            return 0;
+        }
+
+        aiString texturePath;
+        if (material->GetTexture(aiTextureType_DIFFUSE, 0, &texturePath) != AI_SUCCESS)
+        {
+            return 0;
+        }
+
+        std::string resolvedPath = ResolveTexturePath(modelDirectory, texturePath);
+        if (gpfile)
+        {
+            fprintf(
+                gpfile,
+                "ModelLoader: Mesh '%s' diffuse texture: %s -> %s\n",
+                mesh->mName.length > 0 ? mesh->mName.C_Str() : "(unnamed)",
+                texturePath.C_Str(),
+                resolvedPath.c_str());
+        }
+
+        return Texture::LoadAlbedoTexture(resolvedPath);
     }
 }
 
@@ -64,7 +247,11 @@ bool ModelLoader::LoadModel(const std::string& path, std::vector<Mesh>& outMeshe
     outInfo.MaterialCount = scene->mNumMaterials;
     outInfo.TextureCount = CountMaterialTextures(scene);
 
-    ProcessNode(scene->mRootNode, scene, outMeshes, outInfo);
+    std::filesystem::path modelPath(path);
+    std::string modelDirectory = modelPath.parent_path().string();
+
+    ProcessNode(scene->mRootNode, scene, aiMatrix4x4(), modelDirectory, outMeshes, outInfo);
+    FinalizeBounds(outInfo);
     outInfo.Loaded = true;
 
     if (gpfile)
@@ -84,22 +271,25 @@ bool ModelLoader::LoadModel(const std::string& path, std::vector<Mesh>& outMeshe
     return true;
 }
 
-void ModelLoader::ProcessNode(aiNode* node, const aiScene* scene, std::vector<Mesh>& outMeshes, ModelInfo& outInfo)
+void ModelLoader::ProcessNode(aiNode* node, const aiScene* scene, const aiMatrix4x4& parentTransform, const std::string& modelDirectory, std::vector<Mesh>& outMeshes, ModelInfo& outInfo)
 {
+    aiMatrix4x4 nodeTransform = parentTransform * node->mTransformation;
+    outInfo.HasNodeTransforms = true;
+
     for (unsigned int i = 0; i < node->mNumMeshes; i++)
     {
         aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
-        outMeshes.emplace_back(ProcessMesh(mesh, scene, outInfo));
+        outMeshes.emplace_back(ProcessMesh(mesh, scene, nodeTransform, modelDirectory, outInfo));
         outInfo.MeshCount++;
     }
 
     for (unsigned int i = 0; i < node->mNumChildren; i++)
     {
-        ProcessNode(node->mChildren[i], scene, outMeshes, outInfo);
+        ProcessNode(node->mChildren[i], scene, nodeTransform, modelDirectory, outMeshes, outInfo);
     }
 }
 
-Mesh ModelLoader::ProcessMesh(aiMesh* mesh, const aiScene* scene, ModelInfo& outInfo)
+Mesh ModelLoader::ProcessMesh(aiMesh* mesh, const aiScene* scene, const aiMatrix4x4& nodeTransform, const std::string& modelDirectory, ModelInfo& outInfo)
 {
     std::vector<Vertex> vertices;
     std::vector<unsigned int> indices;
@@ -111,20 +301,24 @@ Mesh ModelLoader::ProcessMesh(aiMesh* mesh, const aiScene* scene, ModelInfo& out
     outInfo.HasTexCoords = outInfo.HasTexCoords || hasTexCoords;
     outInfo.HasVertexColors = outInfo.HasVertexColors || hasVertexColors;
 
+    LogUVDiagnostics(mesh, hasTexCoords);
+
     // Optimization: Reserve memory upfront to avoid reallocations
     vertices.reserve(mesh->mNumVertices);
     indices.reserve(mesh->mNumFaces * 3);
 
     for (unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
-        ExpandBounds(outInfo, mesh->mVertices[i]);
+        aiVector3D transformedPosition = TransformPosition(nodeTransform, mesh->mVertices[i]);
+        ExpandBounds(outInfo, transformedPosition);
 
         Vertex vertex;
-        vertex.Position = vmath::vec3(mesh->mVertices[i].x, mesh->mVertices[i].y, mesh->mVertices[i].z);
+        vertex.Position = vmath::vec3(transformedPosition.x, transformedPosition.y, transformedPosition.z);
 
         if (hasNormals)
         {
-            vertex.Normal = vmath::vec3(mesh->mNormals[i].x, mesh->mNormals[i].y, mesh->mNormals[i].z);
+            aiVector3D transformedNormal = TransformNormal(nodeTransform, mesh->mNormals[i]);
+            vertex.Normal = vmath::vec3(transformedNormal.x, transformedNormal.y, transformedNormal.z);
         }
         else
         {
@@ -167,7 +361,10 @@ Mesh ModelLoader::ProcessMesh(aiMesh* mesh, const aiScene* scene, ModelInfo& out
     outInfo.TriangleCount += mesh->mNumFaces;
     outInfo.IndexCount += indices.size();
 
+    GLuint diffuseTexture = LoadDiffuseTextureForMesh(mesh, scene, modelDirectory);
+    outInfo.HasAlbedoTexture = outInfo.HasAlbedoTexture || (diffuseTexture != 0);
+
     Mesh m;
-    m.Create(vertices, indices);
+    m.Create(vertices, indices, diffuseTexture);
     return m;
 }

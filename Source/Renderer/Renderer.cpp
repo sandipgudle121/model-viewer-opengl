@@ -25,12 +25,29 @@ enum
 
 Model gCubeModel;
 GLuint mvpMatrixUniform = 0;
+GLuint modelMatrixUniform = 0;
+GLuint debugModeUniform = 0;
+GLuint albedoTextureUniform = 0;
+GLuint cameraPositionUniform = 0;
+GLuint lightDirectionUniform = 0;
+GLuint lightAmbientUniform = 0;
+GLuint lightDiffuseUniform = 0;
+GLuint lightSpecularUniform = 0;
+GLuint materialAmbientUniform = 0;
+GLuint materialDiffuseUniform = 0;
+GLuint materialSpecularUniform = 0;
+GLuint materialShininessUniform = 0;
 vmath::mat4 perspectiveProjectionMatrix;
 
 Camera gCamera;
 bool gbWireframe = false;
+int gDebugMode = 2;
 float gModelYaw = 0.0f;
 float gModelPitch = 0.0f;
+vmath::vec3 gModelTranslation = vmath::vec3(0.0f, 0.0f, 0.0f);
+vmath::vec3 gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
+float gModelScale = 1.0f;
+float gModelBaseScale = 1.0f;
 
 void printGLInfo(void)
 {
@@ -85,6 +102,8 @@ void DrawModelInformationPanel(const ModelInfo& info)
     ImGui::Text("Has Normals: %s", YesNo(info.HasNormals));
     ImGui::Text("Has UVs: %s", YesNo(info.HasTexCoords));
     ImGui::Text("Has Vertex Colors: %s", YesNo(info.HasVertexColors));
+    ImGui::Text("Has Albedo Texture: %s", YesNo(info.HasAlbedoTexture));
+    ImGui::Text("Has Node Transforms: %s", YesNo(info.HasNodeTransforms));
 
     ImGui::Separator();
     ImGui::Text("Path:");
@@ -105,6 +124,24 @@ void DrawModelInformationPanel(const ModelInfo& info)
 
     ImGui::Separator();
     ImGui::Text("Loaded: %s", YesNo(info.Loaded));
+    ImGui::End();
+}
+
+void DrawModelTransformPanel()
+{
+    ImGui::Begin("Model Transform");
+    ImGui::DragFloat3("Translate", &gModelTranslation[0], 0.01f);
+    ImGui::DragFloat3("Rotate", &gModelRotation[0], 0.5f);
+    ImGui::DragFloat("Scale", &gModelScale, 0.01f, 0.01f, 100.0f);
+
+    if (ImGui::Button("Reset"))
+    {
+        gModelTranslation = vmath::vec3(0.0f, 0.0f, 0.0f);
+        gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
+        gModelScale = 1.0f;
+        gModelYaw = 0.0f;
+        gModelPitch = 0.0f;
+    }
     ImGui::End();
 }
 
@@ -185,6 +222,18 @@ int initialize(HWND hwnd)
     }
 
     mvpMatrixUniform = glGetUniformLocation(shaderProgramObject, "uMVPMatrix");
+    modelMatrixUniform = glGetUniformLocation(shaderProgramObject, "uModelMatrix");
+    debugModeUniform = glGetUniformLocation(shaderProgramObject, "uDebugMode");
+    albedoTextureUniform = glGetUniformLocation(shaderProgramObject, "uAlbedoTexture");
+    cameraPositionUniform = glGetUniformLocation(shaderProgramObject, "uCameraPosition");
+    lightDirectionUniform = glGetUniformLocation(shaderProgramObject, "uLightDirection");
+    lightAmbientUniform = glGetUniformLocation(shaderProgramObject, "uLightAmbient");
+    lightDiffuseUniform = glGetUniformLocation(shaderProgramObject, "uLightDiffuse");
+    lightSpecularUniform = glGetUniformLocation(shaderProgramObject, "uLightSpecular");
+    materialAmbientUniform = glGetUniformLocation(shaderProgramObject, "uMaterialAmbient");
+    materialDiffuseUniform = glGetUniformLocation(shaderProgramObject, "uMaterialDiffuse");
+    materialSpecularUniform = glGetUniformLocation(shaderProgramObject, "uMaterialSpecular");
+    materialShininessUniform = glGetUniformLocation(shaderProgramObject, "uMaterialShininess");
 
     // Try to load an external model, fallback to cube if it fails
     if (!gCubeModel.Load("Assets/Models/fatalis/source/fatalis.fbx")) {
@@ -196,13 +245,19 @@ int initialize(HWND hwnd)
     glDepthFunc(GL_LEQUAL);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+    const ModelInfo& info = gCubeModel.GetInfo();
     gCamera.Target = vmath::vec3(0.0f, 0.0f, 0.0f);
-    gCamera.Radius = 6.0f;
     gCamera.Yaw = 0.0f;
     gCamera.Pitch = 0.0f;
     gCamera.Up = vmath::vec3(0.0f, 1.0f, 0.0f);
+    gCamera.Radius = 6.0f;
     gModelYaw = 0.0f;
     gModelPitch = 0.0f;
+    gModelTranslation = vmath::vec3(0.0f, 0.0f, 0.0f);
+    gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
+    gModelBaseScale = info.NormalizedScale;
+    gModelScale = 1.0f;
+    gDebugMode = 0;
 
     perspectiveProjectionMatrix = vmath::mat4::identity();
     return 0;
@@ -228,17 +283,28 @@ void display(HDC hdc)
     {
         ImGui::Begin("Toolbox");
         ImGui::Checkbox("Wireframe Mode", &gbWireframe);
+        ImGui::Text("Debug Mode");
+        ImGui::RadioButton("Vertex Color", &gDebugMode, 0);
+        ImGui::RadioButton("Normal Visualization", &gDebugMode, 1);
+        ImGui::RadioButton("Albedo Texture", &gDebugMode, 2);
         ImGui::End();
 
+        DrawModelTransformPanel();
         DrawModelInformationPanel(gCubeModel.GetInfo());
     }
 
     glUseProgram(shaderProgramObject);
     
-    // 1. Model Matrix: Rotate the model directly for unrestricted viewer-style tumble
+    const ModelInfo& info = gCubeModel.GetInfo();
     vmath::mat4 modelMatrix =
+        vmath::translate(gModelTranslation) *
+        vmath::scale(gModelBaseScale * gModelScale, gModelBaseScale * gModelScale, gModelBaseScale * gModelScale) *
+        vmath::rotate(gModelRotation[2], 0.0f, 0.0f, 1.0f) *
+        vmath::rotate(gModelRotation[1], 0.0f, 1.0f, 0.0f) *
+        vmath::rotate(gModelRotation[0], 1.0f, 0.0f, 0.0f) *
         vmath::rotate(gModelYaw, 0.0f, 1.0f, 0.0f) *
-        vmath::rotate(gModelPitch, 1.0f, 0.0f, 0.0f);
+        vmath::rotate(gModelPitch, 1.0f, 0.0f, 0.0f) *
+        vmath::translate(-info.BoundsCenter[0], -info.BoundsCenter[1], -info.BoundsCenter[2]);
     
     // 2. View Matrix: Using our new Camera class
     vmath::mat4 viewMatrix = gCamera.GetViewMatrix();
@@ -246,7 +312,20 @@ void display(HDC hdc)
     // 3. MVP Matrix: P * V * M
     vmath::mat4 mvpMatrix = perspectiveProjectionMatrix * viewMatrix * modelMatrix;
 
+    glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, modelMatrix);
     glUniformMatrix4fv(mvpMatrixUniform, 1, GL_FALSE, mvpMatrix);
+    glUniform1i(debugModeUniform, gDebugMode);
+    glUniform1i(albedoTextureUniform, 0);
+    vmath::vec3 cameraPos = gCamera.GetPosition();
+    glUniform3f(cameraPositionUniform, cameraPos[0], cameraPos[1], cameraPos[2]);
+    glUniform3f(lightDirectionUniform, -0.3f, -1.0f, -0.5f);
+    glUniform4f(lightAmbientUniform, 0.2f, 0.2f, 0.2f, 1.0f);
+    glUniform4f(lightDiffuseUniform, 0.7f, 0.7f, 0.7f, 1.0f);
+    glUniform4f(lightSpecularUniform, 1.0f, 1.0f, 1.0f, 1.0f);
+    glUniform4f(materialAmbientUniform, 1.0f, 1.0f, 1.0f, 1.0f);
+    glUniform4f(materialDiffuseUniform, 1.0f, 1.0f, 1.0f, 1.0f);
+    glUniform4f(materialSpecularUniform, 1.0f, 1.0f, 1.0f, 1.0f);
+    glUniform1f(materialShininessUniform, 32.0f);
     
     gCubeModel.Draw();
     

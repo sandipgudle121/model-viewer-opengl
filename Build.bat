@@ -10,6 +10,7 @@ Source\Core\Logger.cpp ^
 Source\Renderer\Renderer.cpp ^
 Source\Renderer\Shader.cpp ^
 Source\Renderer\Mesh.cpp ^
+Source\Renderer\Texture.cpp ^
 Source\Scene\Camera.cpp ^
 Source\Scene\Model.cpp ^
 Source\Importer\ModelLoader.cpp ^

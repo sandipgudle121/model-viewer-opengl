@@ -1,5 +1,6 @@
 #include "Model.h"
 #include "../Importer/ModelLoader.h"
+#include <utility>
 
 void Model::Draw()
 {
@@ -76,7 +77,7 @@ void Model::LoadCube()
 
     Mesh cubeMesh;
     cubeMesh.Create(cubeVertices, cubeIndices);
-    Meshes.push_back(cubeMesh);
+    Meshes.push_back(std::move(cubeMesh));
 
     Info.Loaded = true;
     Info.HasBounds = true;
