@@ -49,6 +49,34 @@ vmath::vec3 gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
 float gModelScale = 1.0f;
 float gModelBaseScale = 1.0f;
 
+bool loadModel(const char* path)
+{
+    if (path == nullptr || path[0] == '\0')
+    {
+        return false;
+    }
+
+    if (!gCubeModel.Load(path))
+    {
+        return false;
+    }
+
+    const ModelInfo& info = gCubeModel.GetInfo();
+    gCamera.Target = vmath::vec3(0.0f, 0.0f, 0.0f);
+    gCamera.Yaw = 0.0f;
+    gCamera.Pitch = 0.0f;
+    gCamera.Up = vmath::vec3(0.0f, 1.0f, 0.0f);
+    gCamera.Radius = 6.0f;
+    gModelYaw = 0.0f;
+    gModelPitch = 0.0f;
+    gModelTranslation = vmath::vec3(0.0f, 0.0f, 0.0f);
+    gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
+    gModelBaseScale = info.NormalizedScale;
+    gModelScale = 1.0f;
+    gDebugMode = 0;
+    return true;
+}
+
 void printGLInfo(void)
 {
     GLint numExtensions;
@@ -236,7 +264,7 @@ int initialize(HWND hwnd)
     materialShininessUniform = glGetUniformLocation(shaderProgramObject, "uMaterialShininess");
 
     // Try to load an external model, fallback to cube if it fails
-    if (!gCubeModel.Load("Assets/Models/fatalis/source/fatalis.fbx")) {
+    if (!loadModel("Assets/Models/fatalis/source/fatalis.fbx")) {
         gCubeModel.LoadCube();
     }
 
@@ -244,20 +272,6 @@ int initialize(HWND hwnd)
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
-    const ModelInfo& info = gCubeModel.GetInfo();
-    gCamera.Target = vmath::vec3(0.0f, 0.0f, 0.0f);
-    gCamera.Yaw = 0.0f;
-    gCamera.Pitch = 0.0f;
-    gCamera.Up = vmath::vec3(0.0f, 1.0f, 0.0f);
-    gCamera.Radius = 6.0f;
-    gModelYaw = 0.0f;
-    gModelPitch = 0.0f;
-    gModelTranslation = vmath::vec3(0.0f, 0.0f, 0.0f);
-    gModelRotation = vmath::vec3(0.0f, 0.0f, 0.0f);
-    gModelBaseScale = info.NormalizedScale;
-    gModelScale = 1.0f;
-    gDebugMode = 0;
 
     perspectiveProjectionMatrix = vmath::mat4::identity();
     return 0;
@@ -283,7 +297,6 @@ void display(HDC hdc)
     {
         ImGui::Begin("Toolbox");
         ImGui::Checkbox("Wireframe Mode", &gbWireframe);
-        ImGui::Text("Debug Mode");
         ImGui::RadioButton("Vertex Color", &gDebugMode, 0);
         ImGui::RadioButton("Normal Visualization", &gDebugMode, 1);
         ImGui::RadioButton("Albedo Texture", &gDebugMode, 2);

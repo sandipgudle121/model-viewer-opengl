@@ -7,6 +7,7 @@
 #include "../vmath.h"
 
 int initialize(HWND hwnd);
+bool loadModel(const char* path);
 void resize(int width, int height);
 void display(HDC hdc);
 void update(float deltaTime);

@@ -1,4 +1,5 @@
 #include<Windows.h>
+#include<shellapi.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<gl/glew.h>     /* this must be before <gl/gl.h> */
@@ -19,6 +20,7 @@ using namespace vmath;
 #pragma comment(lib,"OpenGL32.lib")
 #pragma comment(lib,"user32.lib")
 #pragma comment(lib,"gdi32.lib")
+#pragma comment(lib,"Shell32.lib")
 #pragma comment(lib,"glew32.lib")
 #pragma comment(lib,"assimp-vc143-mt.lib")
 
@@ -42,6 +44,16 @@ int iResult = 0;
 BOOL gbActive = FALSE;
 DWORD gLastMouseMoveTime = 0;
 BOOL gCursorVisible = TRUE;
+
+static void LoadDroppedFile(HDROP hDrop)
+{
+    char droppedPath[MAX_PATH] = {};
+    if (DragQueryFileA(hDrop, 0, droppedPath, MAX_PATH) > 0)
+    {
+        loadModel(droppedPath);
+    }
+    DragFinish(hDrop);
+}
 
 bool Application::Initialize(HINSTANCE hInstance, int nCmdShow)
 {
@@ -77,6 +89,8 @@ bool Application::Initialize(HINSTANCE hInstance, int nCmdShow)
     ghdc = GetDC(ghwnd);
     iResult = initialize(ghwnd);
     if (iResult != 0) return false;
+
+    DragAcceptFiles(ghwnd, TRUE);
 
     resize(WIN_WIDTH, WIN_HEIGHT);
 
@@ -174,6 +188,11 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT iMsg,WPARAM wParam, LPARAM lParam )
         case WM_MOUSEWHEEL:
             if (!ImGui::GetIO().WantCaptureMouse)
                 handleMouseWheel(GET_WHEEL_DELTA_WPARAM(wParam));
+        break;
+
+        case WM_DROPFILES:
+            LoadDroppedFile((HDROP)wParam);
+            return 0;
         break;
 
         case WM_SIZE :
