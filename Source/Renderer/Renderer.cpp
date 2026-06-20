@@ -7,6 +7,7 @@
 #include "Mesh.h"
 #include <GL/glew.h>
 #include <stdlib.h>
+#include <cstdint>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -14,7 +15,13 @@
 
 /* OpenGL related variables */
 GLuint shaderProgramObject = 0;
-enum { SSG_ATTRIBUTE_POSITION = 0, SSG_ATTRIBUTE_COLOR };
+enum
+{
+    SSG_ATTRIBUTE_POSITION = 0,
+    SSG_ATTRIBUTE_NORMAL,
+    SSG_ATTRIBUTE_TEXCOORD,
+    SSG_ATTRIBUTE_COLOR
+};
 
 Model gCubeModel;
 GLuint mvpMatrixUniform = 0;
@@ -45,6 +52,60 @@ std::string loadShaderSource(const char* filename)
     std::stringstream buffer;
     buffer << file.rdbuf();
     return buffer.str();
+}
+
+std::string FormatCount(std::uint64_t value)
+{
+    std::string text = std::to_string(value);
+    for (int insertPosition = (int)text.length() - 3; insertPosition > 0; insertPosition -= 3)
+    {
+        text.insert((size_t)insertPosition, ",");
+    }
+
+    return text;
+}
+
+const char* YesNo(bool value)
+{
+    return value ? "YES" : "NO";
+}
+
+void DrawModelInformationPanel(const ModelInfo& info)
+{
+    ImGui::Begin("Model Information");
+    ImGui::Text("Meshes: %s", FormatCount(info.MeshCount).c_str());
+    ImGui::Text("Vertices: %s", FormatCount(info.VertexCount).c_str());
+    ImGui::Text("Triangles: %s", FormatCount(info.TriangleCount).c_str());
+    ImGui::Text("Indices: %s", FormatCount(info.IndexCount).c_str());
+    ImGui::Text("Materials: %s", FormatCount(info.MaterialCount).c_str());
+    ImGui::Text("Textures: %s", FormatCount(info.TextureCount).c_str());
+    ImGui::Text("Import Time: %.2f ms", info.ImportTimeMs);
+
+    ImGui::Separator();
+    ImGui::Text("Has Normals: %s", YesNo(info.HasNormals));
+    ImGui::Text("Has UVs: %s", YesNo(info.HasTexCoords));
+    ImGui::Text("Has Vertex Colors: %s", YesNo(info.HasVertexColors));
+
+    ImGui::Separator();
+    ImGui::Text("Path:");
+    ImGui::TextWrapped("%s", info.Path.empty() ? "N/A" : info.Path.c_str());
+
+    ImGui::Separator();
+    ImGui::Text("Bounds:");
+    if (info.HasBounds)
+    {
+        ImGui::Text("Min(%.3f, %.3f, %.3f)", info.BoundsMin[0], info.BoundsMin[1], info.BoundsMin[2]);
+        ImGui::Text("Max(%.3f, %.3f, %.3f)", info.BoundsMax[0], info.BoundsMax[1], info.BoundsMax[2]);
+    }
+    else
+    {
+        ImGui::Text("Min(N/A)");
+        ImGui::Text("Max(N/A)");
+    }
+
+    ImGui::Separator();
+    ImGui::Text("Loaded: %s", YesNo(info.Loaded));
+    ImGui::End();
 }
 
 int initialize(HWND hwnd)
@@ -110,6 +171,8 @@ int initialize(HWND hwnd)
     glAttachShader(shaderProgramObject, vertexShaderObject);
     glAttachShader(shaderProgramObject, fragmentShaderObject);
     glBindAttribLocation(shaderProgramObject, SSG_ATTRIBUTE_POSITION, "aPosition");
+    glBindAttribLocation(shaderProgramObject, SSG_ATTRIBUTE_NORMAL, "aNormal");
+    glBindAttribLocation(shaderProgramObject, SSG_ATTRIBUTE_TEXCOORD, "aTexCoord");
     glBindAttribLocation(shaderProgramObject, SSG_ATTRIBUTE_COLOR, "aColor");
     glLinkProgram(shaderProgramObject);
 
@@ -166,6 +229,8 @@ void display(HDC hdc)
         ImGui::Begin("Toolbox");
         ImGui::Checkbox("Wireframe Mode", &gbWireframe);
         ImGui::End();
+
+        DrawModelInformationPanel(gCubeModel.GetInfo());
     }
 
     glUseProgram(shaderProgramObject);

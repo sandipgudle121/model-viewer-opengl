@@ -1,6 +1,5 @@
 @echo off
 setlocal
-
 if not exist Build mkdir Build
 
 set SRC=^

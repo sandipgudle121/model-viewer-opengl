@@ -16,48 +16,53 @@ void Model::Cleanup()
         mesh.Cleanup();
     }
     Meshes.clear();
+    Info = ModelInfo();
 }
 
 bool Model::Load(const std::string& path)
 {
     Cleanup();
-    return ModelLoader::LoadModel(path, Meshes);
+    bool loaded = ModelLoader::LoadModel(path, Meshes, Info);
+    Info.Loaded = loaded;
+    return loaded;
 }
 
 void Model::LoadCube()
 {
-    // Cube Data: Position (x, y, z) and Color (r, g, b)
-    std::vector<float> cubeVertices = {
+    Cleanup();
+
+    // Cube Data: Position, Normal, TexCoord, Color
+    std::vector<Vertex> cubeVertices = {
         // Front face (Red)
-        -1.0f,  1.0f,  1.0f,  1.0f, 0.0f, 0.0f,
-        -1.0f, -1.0f,  1.0f,  1.0f, 0.0f, 0.0f,
-         1.0f, -1.0f,  1.0f,  1.0f, 0.0f, 0.0f,
-         1.0f,  1.0f,  1.0f,  1.0f, 0.0f, 0.0f,
+        { vmath::vec3(-1.0f,  1.0f,  1.0f), vmath::vec3(0.0f, 0.0f, 1.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(1.0f, 0.0f, 0.0f, 1.0f) },
+        { vmath::vec3(-1.0f, -1.0f,  1.0f), vmath::vec3(0.0f, 0.0f, 1.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(1.0f, 0.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f,  1.0f), vmath::vec3(0.0f, 0.0f, 1.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(1.0f, 0.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f,  1.0f,  1.0f), vmath::vec3(0.0f, 0.0f, 1.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(1.0f, 0.0f, 0.0f, 1.0f) },
         // Back face (Green)
-        -1.0f,  1.0f, -1.0f,  0.0f, 1.0f, 0.0f,
-        -1.0f, -1.0f, -1.0f,  0.0f, 1.0f, 0.0f,
-         1.0f, -1.0f, -1.0f,  0.0f, 1.0f, 0.0f,
-         1.0f,  1.0f, -1.0f,  0.0f, 1.0f, 0.0f,
+        { vmath::vec3(-1.0f,  1.0f, -1.0f), vmath::vec3(0.0f, 0.0f, -1.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(0.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3(-1.0f, -1.0f, -1.0f), vmath::vec3(0.0f, 0.0f, -1.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(0.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f, -1.0f), vmath::vec3(0.0f, 0.0f, -1.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(0.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f,  1.0f, -1.0f), vmath::vec3(0.0f, 0.0f, -1.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(0.0f, 1.0f, 0.0f, 1.0f) },
         // Top face (Blue)
-        -1.0f,  1.0f, -1.0f,  0.0f, 0.0f, 1.0f,
-        -1.0f,  1.0f,  1.0f,  0.0f, 0.0f, 1.0f,
-         1.0f,  1.0f,  1.0f,  0.0f, 0.0f, 1.0f,
-         1.0f,  1.0f, -1.0f,  0.0f, 0.0f, 1.0f,
+        { vmath::vec3(-1.0f,  1.0f, -1.0f), vmath::vec3(0.0f, 1.0f, 0.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(0.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3(-1.0f,  1.0f,  1.0f), vmath::vec3(0.0f, 1.0f, 0.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(0.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3( 1.0f,  1.0f,  1.0f), vmath::vec3(0.0f, 1.0f, 0.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(0.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3( 1.0f,  1.0f, -1.0f), vmath::vec3(0.0f, 1.0f, 0.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(0.0f, 0.0f, 1.0f, 1.0f) },
         // Bottom face (Yellow)
-        -1.0f, -1.0f, -1.0f,  1.0f, 1.0f, 0.0f,
-        -1.0f, -1.0f,  1.0f,  1.0f, 1.0f, 0.0f,
-         1.0f, -1.0f,  1.0f,  1.0f, 1.0f, 0.0f,
-         1.0f, -1.0f, -1.0f,  1.0f, 1.0f, 0.0f,
+        { vmath::vec3(-1.0f, -1.0f, -1.0f), vmath::vec3(0.0f, -1.0f, 0.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(1.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3(-1.0f, -1.0f,  1.0f), vmath::vec3(0.0f, -1.0f, 0.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(1.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f,  1.0f), vmath::vec3(0.0f, -1.0f, 0.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(1.0f, 1.0f, 0.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f, -1.0f), vmath::vec3(0.0f, -1.0f, 0.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(1.0f, 1.0f, 0.0f, 1.0f) },
         // Left face (Cyan)
-        -1.0f,  1.0f, -1.0f,  0.0f, 1.0f, 1.0f,
-        -1.0f, -1.0f, -1.0f,  0.0f, 1.0f, 1.0f,
-        -1.0f, -1.0f,  1.0f,  0.0f, 1.0f, 1.0f,
-        -1.0f,  1.0f,  1.0f,  0.0f, 1.0f, 1.0f,
+        { vmath::vec3(-1.0f,  1.0f, -1.0f), vmath::vec3(-1.0f, 0.0f, 0.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(0.0f, 1.0f, 1.0f, 1.0f) },
+        { vmath::vec3(-1.0f, -1.0f, -1.0f), vmath::vec3(-1.0f, 0.0f, 0.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(0.0f, 1.0f, 1.0f, 1.0f) },
+        { vmath::vec3(-1.0f, -1.0f,  1.0f), vmath::vec3(-1.0f, 0.0f, 0.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(0.0f, 1.0f, 1.0f, 1.0f) },
+        { vmath::vec3(-1.0f,  1.0f,  1.0f), vmath::vec3(-1.0f, 0.0f, 0.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(0.0f, 1.0f, 1.0f, 1.0f) },
         // Right face (Magenta)
-         1.0f,  1.0f, -1.0f,  1.0f, 0.0f, 1.0f,
-         1.0f, -1.0f, -1.0f,  1.0f, 0.0f, 1.0f,
-         1.0f, -1.0f,  1.0f,  1.0f, 0.0f, 1.0f,
-         1.0f,  1.0f,  1.0f,  1.0f, 0.0f, 1.0f
+        { vmath::vec3( 1.0f,  1.0f, -1.0f), vmath::vec3(1.0f, 0.0f, 0.0f), vmath::vec2(1.0f, 1.0f), vmath::vec4(1.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f, -1.0f), vmath::vec3(1.0f, 0.0f, 0.0f), vmath::vec2(1.0f, 0.0f), vmath::vec4(1.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3( 1.0f, -1.0f,  1.0f), vmath::vec3(1.0f, 0.0f, 0.0f), vmath::vec2(0.0f, 0.0f), vmath::vec4(1.0f, 0.0f, 1.0f, 1.0f) },
+        { vmath::vec3( 1.0f,  1.0f,  1.0f), vmath::vec3(1.0f, 0.0f, 0.0f), vmath::vec2(0.0f, 1.0f), vmath::vec4(1.0f, 0.0f, 1.0f, 1.0f) }
     };
 
     std::vector<unsigned int> cubeIndices = {
@@ -72,4 +77,25 @@ void Model::LoadCube()
     Mesh cubeMesh;
     cubeMesh.Create(cubeVertices, cubeIndices);
     Meshes.push_back(cubeMesh);
+
+    Info.Loaded = true;
+    Info.HasBounds = true;
+    Info.HasNormals = true;
+    Info.HasTexCoords = true;
+    Info.HasVertexColors = true;
+    Info.MeshCount = 1;
+    Info.VertexCount = cubeVertices.size();
+    Info.TriangleCount = cubeIndices.size() / 3;
+    Info.IndexCount = cubeIndices.size();
+    Info.MaterialCount = 0;
+    Info.TextureCount = 0;
+    Info.ImportTimeMs = 0.0;
+    Info.Path = "Generated Cube";
+    Info.BoundsMin = vmath::vec3(-1.0f, -1.0f, -1.0f);
+    Info.BoundsMax = vmath::vec3(1.0f, 1.0f, 1.0f);
+}
+
+const ModelInfo& Model::GetInfo() const
+{
+    return Info;
 }
