@@ -22,6 +22,8 @@ vmath::mat4 perspectiveProjectionMatrix;
 
 Camera gCamera;
 bool gbWireframe = false;
+float gModelYaw = 0.0f;
+float gModelPitch = 0.0f;
 
 void printGLInfo(void)
 {
@@ -136,6 +138,8 @@ int initialize(HWND hwnd)
     gCamera.Yaw = 0.0f;
     gCamera.Pitch = 0.0f;
     gCamera.Up = vmath::vec3(0.0f, 1.0f, 0.0f);
+    gModelYaw = 0.0f;
+    gModelPitch = 0.0f;
 
     perspectiveProjectionMatrix = vmath::mat4::identity();
     return 0;
@@ -166,8 +170,10 @@ void display(HDC hdc)
 
     glUseProgram(shaderProgramObject);
     
-    // 1. Model Matrix: Translate and Rotate the cube
-    vmath::mat4 modelMatrix = vmath::rotate(0.0f, vmath::normalize(vmath::vec3(1.0f, 1.0f, 1.0f)));
+    // 1. Model Matrix: Rotate the model directly for unrestricted viewer-style tumble
+    vmath::mat4 modelMatrix =
+        vmath::rotate(gModelYaw, 0.0f, 1.0f, 0.0f) *
+        vmath::rotate(gModelPitch, 1.0f, 0.0f, 0.0f);
     
     // 2. View Matrix: Using our new Camera class
     vmath::mat4 viewMatrix = gCamera.GetViewMatrix();
@@ -188,7 +194,7 @@ void display(HDC hdc)
 
 void update(float deltaTime)
 {
-    // Orbit Camera Input Handling
+    // Model viewer input handling
     static POINT lastMousePos = { 0, 0 };
     static bool isDragging = false;
     POINT currentMousePos;
@@ -211,16 +217,11 @@ void update(float deltaTime)
             int dy = currentMousePos.y - lastMousePos.y;
             lastMousePos = currentMousePos;
 
-            // Left Mouse: Rotate
+            // Left Mouse: Rotate model
             if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
             {
-                // Synchronized sensitivity and inverted dy for natural feel
-                gCamera.Yaw -= (float)dx * 0.2f;
-                gCamera.Pitch -= (float)dy * 0.2f; 
-
-                // Strict clamping prevents the Z-translation jump at the poles
-                if (gCamera.Pitch > 89.0f) gCamera.Pitch = 89.0f;
-                if (gCamera.Pitch < -89.0f) gCamera.Pitch = -89.0f;
+                gModelYaw += (float)dx * 0.2f;
+                gModelPitch += (float)dy * 0.2f;
             }
 
             // Middle Mouse: Pan
